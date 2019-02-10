@@ -1,1 +1,1 @@
-diplom-react
+Diplom in react
