@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Col, Row, Container} from 'reactstrap';
 import Header from '../header';
+import ItemList from '../itemList/itemList';
 
 export default class OurCoffe extends Component {
 
@@ -17,12 +18,12 @@ export default class OurCoffe extends Component {
                 <Container>
                     <Row>
                         <Col lg={{size: 4, offset: 2}}>
-                            <img class="shop__girl" src="img/coffee_girl.jpg" alt="girl"/>
+                            <img className="shop__girl" src="img/coffee_girl.jpg" alt="girl"/>
                         </Col>
                         <Col lg="4">
-                            <div class="title">About our beans</div>
-                            <img class="beanslogo" src="logo/Beans_logo_dark.svg" alt="Beans logo"/>
-                            <div class="shop__text">
+                            <div className="title">About our beans</div>
+                            <img className="beanslogo" src="logo/Beans_logo_dark.svg" alt="Beans logo"/>
+                            <div className="shop__text">
                                 Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
                                 {'\n'}{'\n'}
                                 Afraid at highly months do things on at. Situation recommend objection do intention{'\n'}
@@ -33,7 +34,7 @@ export default class OurCoffe extends Component {
                             </div>
                         </Col>
                     </Row>
-                    <div class="line"></div>
+                    <div className="line"></div>
                     <Row>
                         <Col lg={{size: 4, offset: 2}}>
                             <form action="#" className="shop__search">
@@ -56,7 +57,8 @@ export default class OurCoffe extends Component {
                     </Row>
                     <Row>
                         <Col lg={{size: 10, offset: 1}}>
-                            <div class="shop__wrapper">
+                            <ItemList/>
+                            {/* <div class="shop__wrapper">
                                 <div class="shop__item">
                                     <img src="https://www.sciencenews.org/sites/default/files/main/articles/100315_coffee_opener_NEW_0.jpg" alt="coffee"/>>
                                     <div class="shop__item-title">
@@ -105,7 +107,7 @@ export default class OurCoffe extends Component {
                                     <div class="shop__item-country">Brazil</div>
                                     <div class="shop__item-price">10.73$</div>
                                 </div>
-                            </div>
+                            </div> */}
                         </Col>
                     </Row>
                 </Container>

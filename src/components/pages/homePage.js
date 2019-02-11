@@ -3,10 +3,11 @@ import {Col, Row, Container} from 'reactstrap';
 import {Link} from 'react-router-dom';
 import './pages.sass';
 import Header from '../header';
+import ItemList from '../itemList';
 
 export default class HomePage extends Component {
-
-    render() {
+    
+    render() {       
         return (
             <>
             <div className="preview">
@@ -47,34 +48,12 @@ export default class HomePage extends Component {
                     </Row>
                 </Container>
             </section>
-            <section class="best">
+            <section className="best">
                 <Container>
-                    <div class="title">Our best</div>
+                    <div className="title">Our best</div>
                     <Row>
                         <Col lg={{size: 10, offset: 1}}>
-                            <div class="best__wrapper">
-                                <div class="best__item">
-                                    <img src="https://www.sciencenews.org/sites/default/files/main/articles/100315_coffee_opener_NEW_0.jpg" alt="coffee" />
-                                    <div class="best__item-title">
-                                        Solimo Coffee Beans 2kg
-                                    </div>
-                                    <div class="best__item-price">10.73$</div>
-                                </div>
-                                <div class="best__item">
-                                    <img src="https://www.sciencenews.org/sites/default/files/main/articles/100315_coffee_opener_NEW_0.jpg" alt="coffee"/>
-                                    <div class="best__item-title">
-                                        Presto Coffee Beans 1kg
-                                    </div>
-                                    <div class="best__item-price">15.99$</div>
-                                </div>
-                                <div class="best__item">
-                                    <img src="https://www.sciencenews.org/sites/default/files/main/articles/100315_coffee_opener_NEW_0.jpg" alt="coffee"/>
-                                    <div class="best__item-title">
-                                        AROMISTICO Coffee 1kg
-                                    </div>
-                                    <div class="best__item-price">6.99$</div>
-                                </div>
-                            </div>
+                            <ItemList/>
                         </Col>
                     </Row>
                 </Container>

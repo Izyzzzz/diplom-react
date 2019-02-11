@@ -6,10 +6,10 @@ export default class Contact extends Component {
 
     render() {
         return (
-            <div class="banner">
+            <div className="banner">
                 <Container>
                     <Header />
-                    <h1 class="title-big">Our Coffee</h1>
+                    <h1 className="title-big">Our Coffee</h1>
                 </Container>
             </div>
         )

@@ -5,7 +5,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './index.css';
 import Footer from '../footer';
 
-export default class App extends Component {    
+export default class App extends Component {
+     
     render() {
         return (
             <Router>
