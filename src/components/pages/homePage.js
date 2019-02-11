@@ -3,9 +3,46 @@ import {Col, Row, Container} from 'reactstrap';
 import {Link} from 'react-router-dom';
 import './pages.sass';
 import Header from '../header';
-import ItemList from '../itemList';
+import getService from '../../services/getService';
+import idGenerator from 'react-id-generator';
 
 export default class HomePage extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            newBase: null
+        };
+    }
+
+    componentDidMount(){
+        new getService().getResource()
+        .then(res => {
+            this.setState( () => {
+                return{
+                    newBase: res.bestsellers
+                }
+            });
+        })
+    }
+    
+    newBase = () => {
+        let elements = [];
+        if (this.state.newBase) {
+            const items = this.state.newBase.map((item, index) => {
+                return (                    
+                    <Link to={`/bestsellers/${index}`} className="best__item" key={idGenerator('coffee')}>
+                         <img src={item.url} alt="coffee" />
+                         <div className="best__item-title">
+                            {item.name}
+                         </div>
+                         <div className="best__item-price">{item.price}</div>
+                    </Link>
+                )
+            });
+            elements.push(items);
+        }
+        return elements;
+    }
     
     render() {       
         return (
@@ -53,7 +90,9 @@ export default class HomePage extends Component {
                     <div className="title">Our best</div>
                     <Row>
                         <Col lg={{size: 10, offset: 1}}>
-                            <ItemList/>
+                            <div className="best__wrapper">
+                                {this.newBase()}
+                            </div>
                         </Col>
                     </Row>
                 </Container>

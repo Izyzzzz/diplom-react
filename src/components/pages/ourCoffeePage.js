@@ -1,10 +1,48 @@
 import React, {Component} from 'react';
 import {Col, Row, Container} from 'reactstrap';
+import {Link} from 'react-router-dom';
 import Header from '../header';
-import ItemList from '../itemList/itemList';
+import getService from '../../services/getService';
+import idGenerator from 'react-id-generator';
 
 export default class OurCoffe extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            newBase: null
+        };
+    }
 
+    componentDidMount(){
+        new getService().getResource()
+        .then(res => { 
+            this.setState( () => {
+                return{
+                    newBase: res.coffee
+                }
+            });
+        })
+    }
+    
+    newBase = () => {
+        let elements = [];
+        if (this.state.newBase) {
+            const items = this.state.newBase.map((item, index) => {
+                return (
+                    <Link to={`/coffee/${index}`} className="shop__item" key={idGenerator('coffee')}>
+                        <img src={item.url} alt="coffee"/>
+                        <div className="shop__item-title">
+                            {item.name}
+                        </div>
+                        <div className="shop__item-country">{item.country}</div>
+                        <div className="shop__item-price">{item.price}</div>
+                    </Link>
+                )
+            });
+            elements.push(items);
+        }
+        return elements;
+    }
     render() {
         return (
             <>
@@ -42,7 +80,7 @@ export default class OurCoffe extends Component {
                                 <input id="filter" type="text" placeholder="start typing here..." className="shop__search-input"/>
                             </form>
                         </Col>
-                        <Col li="4">
+                        <Col lg="4">
                             <div className="shop__filter">
                                 <div className="shop__filter-label">
                                     Or filter
@@ -57,57 +95,9 @@ export default class OurCoffe extends Component {
                     </Row>
                     <Row>
                         <Col lg={{size: 10, offset: 1}}>
-                            <ItemList/>
-                            {/* <div class="shop__wrapper">
-                                <div class="shop__item">
-                                    <img src="https://www.sciencenews.org/sites/default/files/main/articles/100315_coffee_opener_NEW_0.jpg" alt="coffee"/>>
-                                    <div class="shop__item-title">
-                                        Solimo Coffee Beans 2kg
-                                    </div>
-                                    <div class="shop__item-country">Brazil</div>
-                                    <div class="shop__item-price">10.73$</div>
-                                </div>
-                                <div class="shop__item">
-                                    <img src="https://www.sciencenews.org/sites/default/files/main/articles/100315_coffee_opener_NEW_0.jpg" alt="coffee"/>
-                                    <div class="shop__item-title">
-                                        Presto Coffee Beans 1kg
-                                    </div>
-                                    <div class="shop__item-country">Brazil</div>
-                                    <div class="shop__item-price">15.99$</div>
-                                </div>
-                                <div class="shop__item">
-                                    <img src="https://hhp-blog.s3.amazonaws.com/2018/07/iStock-673468996.jpg" alt="coffee"/>
-                                    <div class="shop__item-title">
-                                        AROMISTICO Coffee 1kg
-                                    </div>
-                                    <div class="shop__item-country">Brazil</div>
-                                    <div class="shop__item-price">6.99$</div>
-                                </div>
-                                <div class="shop__item">
-                                    <img src="https://www.sciencenews.org/sites/default/files/main/articles/100315_coffee_opener_NEW_0.jpg" alt="coffee"/>
-                                    <div class="shop__item-title">
-                                        Solimo Coffee Beans 2kg
-                                    </div>
-                                    <div class="shop__item-country">Brazil</div>
-                                    <div class="shop__item-price">10.73$</div>
-                                </div>
-                                <div class="shop__item">
-                                    <img src="https://i0.wp.com/www.healthline.com/hlcmsresource/images/AN_images/AN275-cup-of-coffee-732x549-Thumb.jpg?w=756" alt="coffee"/>
-                                    <div class="shop__item-title">
-                                        Solimo Coffee Beans 2kg
-                                    </div>
-                                    <div class="shop__item-country">Brazil</div>
-                                    <div class="shop__item-price">10.73$</div>
-                                </div>
-                                <div class="shop__item">
-                                    <img src="https://www.sciencenews.org/sites/default/files/main/articles/100315_coffee_opener_NEW_0.jpg" alt="coffee"/>
-                                    <div class="shop__item-title">
-                                        Solimo Coffee Beans 2kg
-                                    </div>
-                                    <div class="shop__item-country">Brazil</div>
-                                    <div class="shop__item-price">10.73$</div>
-                                </div>
-                            </div> */}
+                            <div className="shop__wrapper">
+                                {this.newBase()}
+                            </div>
                         </Col>
                     </Row>
                 </Container>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {HomePage, OurCoffeePage, PleasurePage, ContactPage} from '../pages';
+import {HomePage, OurCoffeePage, PleasurePage, ContactPage, CoffeePage} from '../pages';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import './index.css';
@@ -16,6 +16,7 @@ export default class App extends Component {
                         <Route path='/ourcoffee' component={OurCoffeePage} />
                         <Route path='/pleasure' component={PleasurePage} />
                         <Route path='/contact' exact component={ContactPage} />
+                        <Route path='/:conf/:id' component={CoffeePage}/>
                     </Switch>                    
                     <Footer />
                 </div>
