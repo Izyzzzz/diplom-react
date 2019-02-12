@@ -5,12 +5,14 @@ import Header from '../header';
 import getService from '../../services/getService';
 import idGenerator from 'react-id-generator';
 import ItemFilter from '../itemFilter';
+import ItemSearch from '../itemSearch';
 
 export default class OurCoffe extends Component {
     constructor(props) {
         super(props);
         this.state = {
             newBase: null,
+            term: '',
             filter: ''
         };
     }
@@ -23,6 +25,16 @@ export default class OurCoffe extends Component {
                     newBase: res.coffee
                 }
             });
+        })
+    }
+
+    searchItems = (items, term) => {
+        if (term.length === 0) {
+            return items
+        }
+
+        return items.filter((item) => {
+            return item.name.toLowerCase().indexOf(term) > -1
         })
     }
 
@@ -42,7 +54,7 @@ export default class OurCoffe extends Component {
     newBase = () => {
         let elements = [];
         if (this.state.newBase) {
-            const itemsFilter = this.filterItems(this.state.newBase, this.state.filter);
+            const itemsFilter = this.filterItems(this.searchItems(this.state.newBase, this.state.term), this.state.filter);
             const items = itemsFilter.map((item, index) => {
                 return (
                     <Link to={`/coffee/${index}`} className="shop__item" key={idGenerator('coffee')}>
@@ -60,9 +72,14 @@ export default class OurCoffe extends Component {
         return elements;
     }
 
+    onUpdateSearch = (term) => {
+        this.setState({term})
+    }
+
     onFilterSelect = (filter) => {
         this.setState({filter})
     }
+
     render() {
         const {filter} = this.state;
         return (
@@ -95,12 +112,8 @@ export default class OurCoffe extends Component {
                     </Row>
                     <div className="line"></div>
                     <Row>
-                        <Col lg={{size: 4, offset: 2}}>
-                            <form action="#" className="shop__search">
-                                <label className="shop__search-label" htmlFor="filter">Looking for</label>
-                                <input id="filter" type="text" placeholder="start typing here..." className="shop__search-input"/>
-                            </form>
-                        </Col>
+                        <ItemSearch
+                        onUpdateSearch={this.onUpdateSearch}/>
                         <ItemFilter
                         filter={filter}
                         onFilterSelect={this.onFilterSelect}/>
