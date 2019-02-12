@@ -24,10 +24,16 @@ export default class CoffeItem extends Component {
             });
         })
     }
-    truncateNo = (maxlength) => {
-        this.setState({maxlength})
+    truncateNo = (str) => {
+        if (typeof str === 'undefined') {
+            return
+        }
+        this.setState({maxlength: str.length})
     }
-    truncate(str, maxlength) {
+    truncate = (str, maxlength) => {
+        if (typeof str === 'undefined') {
+            return
+        }
         return (str.length > maxlength) ?
           str.slice(0, maxlength - 3) + '...' : str;
       }
@@ -59,7 +65,7 @@ export default class CoffeItem extends Component {
                                 <span>Country:</span>
                                 {item ? item.country : ''}
                             </div>
-                            <div onClick={() => this.truncateNo(item.description.length)} className="shop__point">
+                            <div onClick={() => this.truncateNo(item.description)} className="shop__point">
                                 <span>Description:</span>
                                 {item ? this.truncate(item.description, maxlength) : ''}
                             </div>
