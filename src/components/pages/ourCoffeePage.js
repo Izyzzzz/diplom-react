@@ -4,12 +4,14 @@ import {Link} from 'react-router-dom';
 import Header from '../header';
 import getService from '../../services/getService';
 import idGenerator from 'react-id-generator';
+import ItemFilter from '../itemFilter';
 
 export default class OurCoffe extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            newBase: null
+            newBase: null,
+            filter: ''
         };
     }
 
@@ -23,11 +25,25 @@ export default class OurCoffe extends Component {
             });
         })
     }
+
+    filterItems = (items, filter) => {
+        switch (filter){
+            case 'Brazil': 
+                return items.filter((item) => item.country === 'Brazil');
+            case 'Kenya': 
+                return items.filter((item) => item.country === 'Kenya');
+            case 'Columbia': 
+                return items.filter((item) => item.country === 'Columbia');
+            default:
+                return items
+        }
+    }
     
     newBase = () => {
         let elements = [];
         if (this.state.newBase) {
-            const items = this.state.newBase.map((item, index) => {
+            const itemsFilter = this.filterItems(this.state.newBase, this.state.filter);
+            const items = itemsFilter.map((item, index) => {
                 return (
                     <Link to={`/coffee/${index}`} className="shop__item" key={idGenerator('coffee')}>
                         <img src={item.url} alt="coffee"/>
@@ -43,7 +59,12 @@ export default class OurCoffe extends Component {
         }
         return elements;
     }
+
+    onFilterSelect = (filter) => {
+        this.setState({filter})
+    }
     render() {
+        const {filter} = this.state;
         return (
             <>
             <div className="banner">
@@ -80,18 +101,9 @@ export default class OurCoffe extends Component {
                                 <input id="filter" type="text" placeholder="start typing here..." className="shop__search-input"/>
                             </form>
                         </Col>
-                        <Col lg="4">
-                            <div className="shop__filter">
-                                <div className="shop__filter-label">
-                                    Or filter
-                                </div>
-                                <div className="shop__filter-group">
-                                    <button className="shop__filter-btn">Brazil</button>
-                                    <button className="shop__filter-btn">Kenya</button>
-                                    <button className="shop__filter-btn">Columbia</button>
-                                </div>
-                            </div>
-                        </Col>
+                        <ItemFilter
+                        filter={filter}
+                        onFilterSelect={this.onFilterSelect}/>
                     </Row>
                     <Row>
                         <Col lg={{size: 10, offset: 1}}>
