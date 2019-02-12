@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Container, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import Header from '../header';
+import {Container, Col, Row, Form, FormGroup, Label, Input } from 'reactstrap';
+import Menu from '../menu';
 
 export default class Contact extends Component {
     constructor(props) {
@@ -21,8 +21,16 @@ export default class Contact extends Component {
             <>
             <div className="banner">
                 <Container>
-                    <Header />
-                    <h1 className="title-big">Contact us</h1>
+                  <Row>
+                    <Col lg='6'>
+                        <header>
+                            <Menu
+                            prefix={'header'}
+                            prefixImg={''}/>
+                        </header>
+                    </Col>
+                  </Row>
+                  <h1 className="title-big">Contact us</h1>
                 </Container>
             </div>
             <section className="contact">

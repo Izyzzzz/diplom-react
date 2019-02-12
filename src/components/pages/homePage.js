@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {Col, Row, Container} from 'reactstrap';
 import {Link} from 'react-router-dom';
 import './pages.sass';
-import Header from '../header';
 import getService from '../../services/getService';
 import idGenerator from 'react-id-generator';
+import Menu from '../menu';
 
 export default class HomePage extends Component {
     constructor(props) {
@@ -19,37 +19,45 @@ export default class HomePage extends Component {
         .then(res => {
             this.setState( () => {
                 return{
-                    newBase: res.bestsellers
+                    newBase: res
                 }
             });
         })
     }
     
     newBase = () => {
-        let elements = [];
         if (this.state.newBase) {
-            const items = this.state.newBase.map((item, index) => {
+            const items = this.state.newBase.coffee.map((item, index) => {
+                if (this.state.newBase.bestsellers.some(el => (el.name === item.name))){
                 return (                    
-                    <Link to={`/bestsellers/${index}`} className="best__item" key={idGenerator('coffee')}>
+                    <Link to={`/coffee/${index}`} className="best__item" key={idGenerator('coffee')}>
                          <img src={item.url} alt="coffee" />
                          <div className="best__item-title">
                             {item.name}
                          </div>
                          <div className="best__item-price">{item.price}</div>
                     </Link>
-                )
+                )}
+                return null;
             });
-            elements.push(items);
+            return items;
         }
-        return elements;
     }
     
     render() {       
         return (
             <>
             <div className="preview">
-               <Container>
-                    <Header />
+                <Container>
+                    <Row>
+                        <Col lg='6'>
+                            <header>
+                                <Menu
+                                prefix={'header'}
+                                prefixImg={''}/>
+                            </header>
+                        </Col>
+                    </Row>
                     <Row className="row">
                         <Col lg={{size: 10, offset: 1}}>
                             <h1 className="title-big">Everything You Love About Coffee</h1>

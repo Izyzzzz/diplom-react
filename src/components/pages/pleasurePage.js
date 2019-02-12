@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Col, Row, Container} from 'reactstrap';
 import './pages.sass';
-import Header from '../header';
+import Menu from '../menu';
 import getService from '../../services/getService';
 import idGenerator from 'react-id-generator';
 export default class Pleasure extends Component {
@@ -47,7 +47,15 @@ export default class Pleasure extends Component {
             <>
             <div className="banner-pleasure">
                 <Container>
-                    <Header />
+                    <Row>
+                        <Col lg='6'>
+                            <header>
+                                <Menu
+                                prefix={'header'}
+                                prefixImg={''}/>
+                            </header>
+                        </Col>
+                    </Row>
                     <h1 className="title-big">For your pleasure</h1>
                 </Container>
             </div>

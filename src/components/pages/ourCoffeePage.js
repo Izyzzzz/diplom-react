@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Col, Row, Container} from 'reactstrap';
 import {Link} from 'react-router-dom';
-import Header from '../header';
+import Menu from '../menu';
 import getService from '../../services/getService';
 import idGenerator from 'react-id-generator';
 import ItemFilter from '../itemFilter';
@@ -86,7 +86,15 @@ export default class OurCoffe extends Component {
             <>
             <div className="banner">
                 <Container>
-                    <Header />
+                    <Row>
+                        <Col lg='6'>
+                            <header>
+                                <Menu
+                                prefix={'header'}
+                                prefixImg={''}/>
+                            </header>
+                        </Col>
+                    </Row>
                     <h1 className="title-big">Our Coffee</h1>
                 </Container>
             </div> 

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Row, Col, Container} from 'reactstrap';
-import Header from '../header';
+import Menu from '../menu';
 import getService from '../../services/getService';
 
 import './pages.sass';
@@ -48,7 +48,15 @@ export default class CoffeItem extends Component {
             <>
             <div className="banner">
                 <Container>
-                    <Header />
+                    <Row>
+                        <Col lg='6'>
+                            <header>
+                                <Menu
+                                prefix={'header'}
+                                prefixImg={''}/>
+                            </header>
+                        </Col>
+                    </Row>
                     <h1 className="title-big">{item ? item.name : ''}</h1>
                 </Container>
             </div>
