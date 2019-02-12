@@ -9,7 +9,8 @@ export default class CoffeItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            newBase: null
+            newBase: null,
+            maxlength: 200
         };
     }
 
@@ -23,8 +24,15 @@ export default class CoffeItem extends Component {
             });
         })
     }
+    truncateNo = (maxlength) => {
+        this.setState({maxlength})
+    }
+    truncate(str, maxlength) {
+        return (str.length > maxlength) ?
+          str.slice(0, maxlength - 3) + '...' : str;
+      }
     render() {
-
+        const {maxlength} = this.state;
         const {id, conf} = this.props.match.params;
         let item = null;
         if( this.state.newBase && this.state.newBase[conf] && this.state.newBase[conf][id]) {
@@ -51,9 +59,9 @@ export default class CoffeItem extends Component {
                                 <span>Country:</span>
                                 {item ? item.country : ''}
                             </div>
-                            <div className="shop__point">
+                            <div onClick={() => this.truncateNo(item.description.length)} className="shop__point">
                                 <span>Description:</span>
-                                {item ? item.description : ''}
+                                {item ? this.truncate(item.description, maxlength) : ''}
                             </div>
                             <div className="shop__point">
                                 <span>Price:</span>
