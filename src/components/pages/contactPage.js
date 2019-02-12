@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Col, Row, Form, FormGroup, Label, Input } from 'reactstrap';
+import {Container, Col, Row, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import Menu from '../menu';
 
 export default class Contact extends Component {
@@ -12,7 +12,7 @@ export default class Contact extends Component {
     }
 
     heandleSubmit = (event) => {
-        // event.preventDefault();
+        event.preventDefault();
         console.log("Submit", this.state.name)
     }
 
@@ -34,7 +34,7 @@ export default class Contact extends Component {
                 </Container>
             </div>
             <section className="contact">
-                <Container>
+            <Container>
                     <Col lg={{size: 4, offset: 4}}>
                         <div className="title">Tell us about your tastes</div>
                         <img className="beanslogo" src="logo/Beans_logo_dark.svg" alt="Beans logo"/>
@@ -66,7 +66,7 @@ export default class Contact extends Component {
                         </FormGroup>
                         <FormGroup check row>
                           <Col sm={{size: 2, offset: 5}}>
-                            <button>Send us</button>
+                            <Button outline color="secondary">Send us</Button>
                           </Col>
                         </FormGroup>
                     </Form>
