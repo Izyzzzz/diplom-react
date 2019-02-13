@@ -12,7 +12,8 @@ export default class Contact extends Component {
             phone: '',
             text: '',
             redInput: '',
-            textInput: ''
+            textInput: '',
+            isEdit: true
         }
     }
 
@@ -28,14 +29,15 @@ export default class Contact extends Component {
             textInput: 'contact__form-input-red'
           })
         } else {
-          this.setState ({            
-            textInput: ''
-          })
           let uploadOb  = {name: this.state.name,
                           email: this.state.email,
                           phone: this.state.phone,
                           text: this.state.text};
           this.postResource("http://localhost:3001/contacts", uploadOb);
+          this.setState ({            
+            textInput: '',
+            isEdit: false
+          })
         }}
     }
     handleNameChange = (e) =>{
@@ -67,9 +69,14 @@ export default class Contact extends Component {
       return await res.json();
     
     }
+    onThank = () => {
+        this.setState({
+            isEdit: !this.state.isEdit,
+        });
+    }
 
     render() {
-      const {redInput, textInput} = this.state;
+      const {redInput, textInput, isEdit} = this.state;
         return (
             <>
             <div className="banner">
@@ -87,11 +94,13 @@ export default class Contact extends Component {
                 </Container>
             </div>
             <section className="contact">
+            
             <Container>
                     <Col lg={{size: 4, offset: 4}}>
                         <div className="title">Tell us about your tastes</div>
                         <img className="beanslogo" src="logo/Beans_logo_dark.svg" alt="Beans logo"/>
                     </Col>
+                    {isEdit ?
                     <Form className="contact__form" onSubmit={this.heandleSubmit}>
                         <FormGroup row >
                           <Label className="contact__form-label" for="exampleName" sm={{size: 2, offset: 3}}>Names<span>*</span></Label>
@@ -148,7 +157,23 @@ export default class Contact extends Component {
                             <Button id="btnSubmin" outline color="secondary">Send us</Button>
                           </Col>
                         </FormGroup>
-                    </Form>
+                    </Form>                
+                  :
+                  <Container>
+                    <Row>
+                      <Col sm={{size: 8, offset: 2}}>
+                        <div className="title-thank">Thank you so much{'\n'}{'\n'} We contact you as soon as posible</div>
+                        <div className="contact-img">
+                          <img src="img/group.png" alt="group"/>
+                        </div>
+                        <Row>
+                          <Col sm={{size: 2, offset: 5}}>
+                            <button className="btnAnother" onClick={this.onThank}>Another ? <img src="img/back-arrow.png" alt="group"/></button>
+                          </Col>
+                        </Row>
+                      </Col>
+                    </Row>
+                  </Container>}
                 </Container>
             </section>
           </>
