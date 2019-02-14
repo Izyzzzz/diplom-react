@@ -47,7 +47,7 @@ export default class Contact extends Component {
                           email: this.state.email,
                           phone: this.state.phone,
                           text: this.state.text};
-          this.postResource("http://localhost:3001/contacts", uploadOb)
+          this.postResource("http://localhost:3001/cosntacts", uploadOb)
               .then(this.setState ({            
                 textInput: '',
                 isEdit: false,
