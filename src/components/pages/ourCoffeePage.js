@@ -7,6 +7,7 @@ import idGenerator from 'react-id-generator';
 import ItemFilter from '../itemFilter';
 import ItemSearch from '../itemSearch';
 import Spinner from '../spinner';
+import ErrorMessage from '../errorMessage';
 
 export default class OurCoffe extends Component {
     constructor(props) {
@@ -14,8 +15,16 @@ export default class OurCoffe extends Component {
         this.state = {
             newBase: null,
             term: '',
-            filter: ''
+            filter: '',
+            error: false,
+            status: null
         };
+    }
+
+    componentDidCatch() {
+        this.setState({
+            error: true
+        })
     }
 
     componentDidMount(){
@@ -27,6 +36,14 @@ export default class OurCoffe extends Component {
                 }
             });
         })
+        .catch(this.onError);
+    }
+
+    onError = (err) => {
+        this.setState({
+            error: true,
+            status: err.status
+        });
     }
 
     searchItems = (items, term) => {
@@ -82,8 +99,13 @@ export default class OurCoffe extends Component {
     }
 
     render() {
-        const {filter, newBase} = this.state;
-        const spinner = !newBase ? <Spinner /> : null; 
+        const {filter, newBase, error, status} = this.state;
+        const errorMessage = error ? <ErrorMessage status={status}/> : null;
+        const spinner = (!newBase && !error) ? <Spinner /> : null;
+
+        if (this.state.error) {
+            return <ErrorMessage />
+        }
         return (
             <>
             <div className="banner">
@@ -130,6 +152,7 @@ export default class OurCoffe extends Component {
                     </Row>
                     <Row>
                         <Col lg={{size: 10, offset: 1}}>
+                            {errorMessage}
                             {spinner}
                             <div className="shop__wrapper">
                                 {this.newBase()}

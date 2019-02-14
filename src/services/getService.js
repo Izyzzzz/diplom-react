@@ -7,8 +7,10 @@ export default class getService {
         const res = await fetch(this._apiBase);
         
         if(!res.ok) {
-            throw new Error(`Could not fetch ` + 
-            `, received ${res.status}`);            
+            const error =  new Error(`Could not fetch ` + 
+            `, received ${res.status}`);
+            error.status = res.status;
+            throw error;            
         }
         return await res.json();
     }

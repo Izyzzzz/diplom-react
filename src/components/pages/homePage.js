@@ -6,13 +6,22 @@ import getService from '../../services/getService';
 import idGenerator from 'react-id-generator';
 import Menu from '../menu';
 import Spinner from '../spinner';
+import ErrorMessage from '../errorMessage';
 
 export default class HomePage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            newBase: null
+            newBase: null,
+            error: false,
+            status: null
         };
+    }
+
+    componentDidCatch() {
+        this.setState({
+            error: true
+        })
     }
 
     componentDidMount(){
@@ -24,6 +33,14 @@ export default class HomePage extends Component {
                 }
             });
         })
+        .catch(this.onError);
+    }
+
+    onError = (err) => {
+        this.setState({
+            error: true,
+            status: err.status
+        });
     }
     
     newBase = () => {
@@ -46,8 +63,12 @@ export default class HomePage extends Component {
     }
     
     render() {
-        const {newBase} = this.state;        
-        const spinner = !newBase ? <Spinner /> : null;   
+        const {newBase, error, status} = this.state;
+        const errorMessage = error ? <ErrorMessage status={status}/> : null;
+        const spinner = (!newBase && !error) ? <Spinner /> : null;  
+        if (this.state.error) {
+            return <ErrorMessage />
+        } 
         return (
             <>
             <div className="preview">
@@ -101,6 +122,7 @@ export default class HomePage extends Component {
                     <div className="title">Our best</div>
                     <Row>
                         <Col lg={{size: 10, offset: 1}}>
+                            {errorMessage}
                             {spinner}
                             <div className="best__wrapper">                                
                                 {this.newBase()}

@@ -3,6 +3,7 @@ import {Container, Col, Row, Form, FormGroup, Label, Input, Button } from 'react
 import Menu from '../menu';
 import InputMask from 'react-input-mask';
 import Spinner from '../spinner';
+import ErrorMessage from '../errorMessage';
 
 export default class Contact extends Component {
     constructor(props) {
@@ -15,8 +16,16 @@ export default class Contact extends Component {
             redInput: '',
             textInput: '',
             isEdit: true,
-            loading: false
+            loading: false,
+            error: false,
+            status: null
         }
+    }
+
+    componentDidCatch() {
+      this.setState({
+          error: true
+      })
     }
 
     heandleSubmit = (event) => {
@@ -43,8 +52,15 @@ export default class Contact extends Component {
                 textInput: '',
                 isEdit: false,
                 loading: false
-              }));
+              }))
+              .catch(this.onError);
         }}
+    }
+    onError = (err) => {
+      this.setState({
+          error: true,
+          status: err.status
+      });
     }
     handleNameChange = (e) =>{
       this.setState({name: e.target.value});
@@ -82,8 +98,12 @@ export default class Contact extends Component {
     }
 
     render() {
-      const {redInput, textInput, isEdit, loading} = this.state;      
-      const spinner = loading ? <Spinner /> : null; 
+      const {redInput, textInput, isEdit, loading, error, status} = this.state;      
+      const errorMessage = error ? <ErrorMessage status={status}/> : null;
+        const spinner = (loading && !error) ? <Spinner /> : null;
+      if (this.state.error) {
+        return <ErrorMessage />
+      }
         return (
             <>
             <div className="banner">
@@ -162,6 +182,7 @@ export default class Contact extends Component {
                         <FormGroup check row>
                           <Col sm={{size: 2, offset: 5}}>
                             <Button id="btnSubmin" outline color="secondary">Send us</Button>
+                            {errorMessage}
                             {spinner}
                           </Col>
                         </FormGroup>

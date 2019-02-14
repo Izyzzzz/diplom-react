@@ -5,12 +5,21 @@ import Menu from '../menu';
 import getService from '../../services/getService';
 import idGenerator from 'react-id-generator';
 import Spinner from '../spinner';
+import ErrorMessage from '../errorMessage';
 export default class Pleasure extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            newBase: null
+            newBase: null,
+            error: false,
+            status: null
         };
+    }
+
+    componentDidCatch() {
+        this.setState({
+            error: true
+        })
     }
 
     componentDidMount(){
@@ -22,6 +31,14 @@ export default class Pleasure extends Component {
                 }
             });
         })
+        .catch(this.onError);
+    }
+
+    onError = (err) => {
+        this.setState({
+            error: true,
+            status: err.status
+        });
     }
     
     newBase = () => {
@@ -44,8 +61,14 @@ export default class Pleasure extends Component {
     }
 
     render() {
-        const {newBase} = this.state;        
-        const spinner = !newBase ? <Spinner /> : null;
+        const {newBase, error, status} = this.state;        
+        const errorMessage = error ? <ErrorMessage status={status}/> : null;
+        const spinner = (!newBase && !error) ? <Spinner /> : null;
+
+        if (this.state.error) {
+            return <ErrorMessage />
+        }
+        
         return (
             <>
             <div className="banner-pleasure">
@@ -85,6 +108,7 @@ export default class Pleasure extends Component {
                     <div className="line"></div>
                     <Row>
                         <Col lg={{size: 10, offset: 1}}>
+                            {errorMessage}
                             {spinner}
                             <div className="shop__wrapper">
                                 {this.newBase()}
