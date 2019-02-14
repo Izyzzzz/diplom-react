@@ -1,0 +1,1886 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <PleasurePage/> Testing snap & state PleasurePage have rendered correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Pleasure />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <div
+          className="banner-pleasure"
+        >
+          <Container
+            tag="div"
+          >
+            <Row
+              tag="div"
+            >
+              <Col
+                lg="6"
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                <header>
+                  <Menu
+                    prefix="header"
+                    prefixImg=""
+                  />
+                </header>
+              </Col>
+            </Row>
+            <h1
+              className="title-big"
+            >
+              For your pleasure
+            </h1>
+          </Container>
+        </div>,
+        <section
+          className="shop"
+        >
+          <Container
+            tag="div"
+          >
+            <Row
+              tag="div"
+            >
+              <Col
+                lg={
+                  Object {
+                    "offset": 2,
+                    "size": 4,
+                  }
+                }
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                <img
+                  alt="girl"
+                  className="shop__girl"
+                  src="img/coffee_cup.jpg"
+                />
+              </Col>
+              <Col
+                lg="4"
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                <div
+                  className="title"
+                >
+                  About our goods
+                </div>
+                <img
+                  alt="Beans logo"
+                  className="beanslogo"
+                  src="logo/Beans_logo_dark.svg"
+                />
+                <div
+                  className="shop__text"
+                >
+                  Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+                  
+
+                  
+
+                  Afraid at highly months do things on at. Situation recommend objection do intention
+                  
+
+                  so questions.
+                  
+
+                  As greatly removed calling pleased improve an. Last ask him cold feel
+                  
+
+                  met spot shy want. Children me laughing we prospect answered followed. At it went
+                  
+
+                  is song that held help face.
+                </div>
+              </Col>
+            </Row>
+            <div
+              className="line"
+            />
+            <Row
+              tag="div"
+            >
+              <Col
+                lg={
+                  Object {
+                    "offset": 1,
+                    "size": 10,
+                  }
+                }
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                <Spinner />
+                <div
+                  className="shop__wrapper"
+                />
+              </Col>
+            </Row>
+          </Container>
+        </section>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Container
+            tag="div"
+          >
+            <Row
+              tag="div"
+            >
+              <Col
+                lg="6"
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                <header>
+                  <Menu
+                    prefix="header"
+                    prefixImg=""
+                  />
+                </header>
+              </Col>
+            </Row>
+            <h1
+              className="title-big"
+            >
+              For your pleasure
+            </h1>
+          </Container>,
+          "className": "banner-pleasure",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Row
+                tag="div"
+              >
+                <Col
+                  lg="6"
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <header>
+                    <Menu
+                      prefix="header"
+                      prefixImg=""
+                    />
+                  </header>
+                </Col>
+              </Row>,
+              <h1
+                className="title-big"
+              >
+                For your pleasure
+              </h1>,
+            ],
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Col
+                  lg="6"
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <header>
+                    <Menu
+                      prefix="header"
+                      prefixImg=""
+                    />
+                  </header>
+                </Col>,
+                "tag": "div",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <header>
+                    <Menu
+                      prefix="header"
+                      prefixImg=""
+                    />
+                  </header>,
+                  "lg": "6",
+                  "tag": "div",
+                  "widths": Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ],
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Menu
+                      prefix="header"
+                      prefixImg=""
+                    />,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "prefix": "header",
+                      "prefixImg": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "header",
+                },
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "For your pleasure",
+                "className": "title-big",
+              },
+              "ref": null,
+              "rendered": "For your pleasure",
+              "type": "h1",
+            },
+          ],
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Container
+            tag="div"
+          >
+            <Row
+              tag="div"
+            >
+              <Col
+                lg={
+                  Object {
+                    "offset": 2,
+                    "size": 4,
+                  }
+                }
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                <img
+                  alt="girl"
+                  className="shop__girl"
+                  src="img/coffee_cup.jpg"
+                />
+              </Col>
+              <Col
+                lg="4"
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                <div
+                  className="title"
+                >
+                  About our goods
+                </div>
+                <img
+                  alt="Beans logo"
+                  className="beanslogo"
+                  src="logo/Beans_logo_dark.svg"
+                />
+                <div
+                  className="shop__text"
+                >
+                  Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+                  
+
+                  
+
+                  Afraid at highly months do things on at. Situation recommend objection do intention
+                  
+
+                  so questions.
+                  
+
+                  As greatly removed calling pleased improve an. Last ask him cold feel
+                  
+
+                  met spot shy want. Children me laughing we prospect answered followed. At it went
+                  
+
+                  is song that held help face.
+                </div>
+              </Col>
+            </Row>
+            <div
+              className="line"
+            />
+            <Row
+              tag="div"
+            >
+              <Col
+                lg={
+                  Object {
+                    "offset": 1,
+                    "size": 10,
+                  }
+                }
+                tag="div"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                <Spinner />
+                <div
+                  className="shop__wrapper"
+                />
+              </Col>
+            </Row>
+          </Container>,
+          "className": "shop",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Row
+                tag="div"
+              >
+                <Col
+                  lg={
+                    Object {
+                      "offset": 2,
+                      "size": 4,
+                    }
+                  }
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <img
+                    alt="girl"
+                    className="shop__girl"
+                    src="img/coffee_cup.jpg"
+                  />
+                </Col>
+                <Col
+                  lg="4"
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <div
+                    className="title"
+                  >
+                    About our goods
+                  </div>
+                  <img
+                    alt="Beans logo"
+                    className="beanslogo"
+                    src="logo/Beans_logo_dark.svg"
+                  />
+                  <div
+                    className="shop__text"
+                  >
+                    Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+                    
+
+                    
+
+                    Afraid at highly months do things on at. Situation recommend objection do intention
+                    
+
+                    so questions.
+                    
+
+                    As greatly removed calling pleased improve an. Last ask him cold feel
+                    
+
+                    met spot shy want. Children me laughing we prospect answered followed. At it went
+                    
+
+                    is song that held help face.
+                  </div>
+                </Col>
+              </Row>,
+              <div
+                className="line"
+              />,
+              <Row
+                tag="div"
+              >
+                <Col
+                  lg={
+                    Object {
+                      "offset": 1,
+                      "size": 10,
+                    }
+                  }
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <Spinner />
+                  <div
+                    className="shop__wrapper"
+                  />
+                </Col>
+              </Row>,
+            ],
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <Col
+                    lg={
+                      Object {
+                        "offset": 2,
+                        "size": 4,
+                      }
+                    }
+                    tag="div"
+                    widths={
+                      Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ]
+                    }
+                  >
+                    <img
+                      alt="girl"
+                      className="shop__girl"
+                      src="img/coffee_cup.jpg"
+                    />
+                  </Col>,
+                  <Col
+                    lg="4"
+                    tag="div"
+                    widths={
+                      Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ]
+                    }
+                  >
+                    <div
+                      className="title"
+                    >
+                      About our goods
+                    </div>
+                    <img
+                      alt="Beans logo"
+                      className="beanslogo"
+                      src="logo/Beans_logo_dark.svg"
+                    />
+                    <div
+                      className="shop__text"
+                    >
+                      Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+                      
+
+                      
+
+                      Afraid at highly months do things on at. Situation recommend objection do intention
+                      
+
+                      so questions.
+                      
+
+                      As greatly removed calling pleased improve an. Last ask him cold feel
+                      
+
+                      met spot shy want. Children me laughing we prospect answered followed. At it went
+                      
+
+                      is song that held help face.
+                    </div>
+                  </Col>,
+                ],
+                "tag": "div",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <img
+                      alt="girl"
+                      className="shop__girl"
+                      src="img/coffee_cup.jpg"
+                    />,
+                    "lg": Object {
+                      "offset": 2,
+                      "size": 4,
+                    },
+                    "tag": "div",
+                    "widths": Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "girl",
+                      "className": "shop__girl",
+                      "src": "img/coffee_cup.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [
+                      <div
+                        className="title"
+                      >
+                        About our goods
+                      </div>,
+                      <img
+                        alt="Beans logo"
+                        className="beanslogo"
+                        src="logo/Beans_logo_dark.svg"
+                      />,
+                      <div
+                        className="shop__text"
+                      >
+                        Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+                        
+
+                        
+
+                        Afraid at highly months do things on at. Situation recommend objection do intention
+                        
+
+                        so questions.
+                        
+
+                        As greatly removed calling pleased improve an. Last ask him cold feel
+                        
+
+                        met spot shy want. Children me laughing we prospect answered followed. At it went
+                        
+
+                        is song that held help face.
+                      </div>,
+                    ],
+                    "lg": "4",
+                    "tag": "div",
+                    "widths": Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "About our goods",
+                        "className": "title",
+                      },
+                      "ref": null,
+                      "rendered": "About our goods",
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Beans logo",
+                        "className": "beanslogo",
+                        "src": "logo/Beans_logo_dark.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.",
+                          "
+",
+                          "
+",
+                          "Afraid at highly months do things on at. Situation recommend objection do intention",
+                          "
+",
+                          "so questions.",
+                          "
+",
+                          "As greatly removed calling pleased improve an. Last ask him cold feel",
+                          "
+",
+                          "met spot shy want. Children me laughing we prospect answered followed. At it went",
+                          "
+",
+                          "is song that held help face.",
+                        ],
+                        "className": "shop__text",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.",
+                        "
+",
+                        "
+",
+                        "Afraid at highly months do things on at. Situation recommend objection do intention",
+                        "
+",
+                        "so questions.",
+                        "
+",
+                        "As greatly removed calling pleased improve an. Last ask him cold feel",
+                        "
+",
+                        "met spot shy want. Children me laughing we prospect answered followed. At it went",
+                        "
+",
+                        "is song that held help face.",
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "line",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Col
+                  lg={
+                    Object {
+                      "offset": 1,
+                      "size": 10,
+                    }
+                  }
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <Spinner />
+                  <div
+                    className="shop__wrapper"
+                  />
+                </Col>,
+                "tag": "div",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [
+                    null,
+                    <Spinner />,
+                    <div
+                      className="shop__wrapper"
+                    />,
+                  ],
+                  "lg": Object {
+                    "offset": 1,
+                    "size": 10,
+                  },
+                  "tag": "div",
+                  "widths": Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  null,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [],
+                      "className": "shop__wrapper",
+                    },
+                    "ref": null,
+                    "rendered": Array [],
+                    "type": "div",
+                  },
+                ],
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": "section",
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <div
+            className="banner-pleasure"
+          >
+            <Container
+              tag="div"
+            >
+              <Row
+                tag="div"
+              >
+                <Col
+                  lg="6"
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <header>
+                    <Menu
+                      prefix="header"
+                      prefixImg=""
+                    />
+                  </header>
+                </Col>
+              </Row>
+              <h1
+                className="title-big"
+              >
+                For your pleasure
+              </h1>
+            </Container>
+          </div>,
+          <section
+            className="shop"
+          >
+            <Container
+              tag="div"
+            >
+              <Row
+                tag="div"
+              >
+                <Col
+                  lg={
+                    Object {
+                      "offset": 2,
+                      "size": 4,
+                    }
+                  }
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <img
+                    alt="girl"
+                    className="shop__girl"
+                    src="img/coffee_cup.jpg"
+                  />
+                </Col>
+                <Col
+                  lg="4"
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <div
+                    className="title"
+                  >
+                    About our goods
+                  </div>
+                  <img
+                    alt="Beans logo"
+                    className="beanslogo"
+                    src="logo/Beans_logo_dark.svg"
+                  />
+                  <div
+                    className="shop__text"
+                  >
+                    Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+                    
+
+                    
+
+                    Afraid at highly months do things on at. Situation recommend objection do intention
+                    
+
+                    so questions.
+                    
+
+                    As greatly removed calling pleased improve an. Last ask him cold feel
+                    
+
+                    met spot shy want. Children me laughing we prospect answered followed. At it went
+                    
+
+                    is song that held help face.
+                  </div>
+                </Col>
+              </Row>
+              <div
+                className="line"
+              />
+              <Row
+                tag="div"
+              >
+                <Col
+                  lg={
+                    Object {
+                      "offset": 1,
+                      "size": 10,
+                    }
+                  }
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <Spinner />
+                  <div
+                    className="shop__wrapper"
+                  />
+                </Col>
+              </Row>
+            </Container>
+          </section>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Container
+              tag="div"
+            >
+              <Row
+                tag="div"
+              >
+                <Col
+                  lg="6"
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <header>
+                    <Menu
+                      prefix="header"
+                      prefixImg=""
+                    />
+                  </header>
+                </Col>
+              </Row>
+              <h1
+                className="title-big"
+              >
+                For your pleasure
+              </h1>
+            </Container>,
+            "className": "banner-pleasure",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <Row
+                  tag="div"
+                >
+                  <Col
+                    lg="6"
+                    tag="div"
+                    widths={
+                      Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ]
+                    }
+                  >
+                    <header>
+                      <Menu
+                        prefix="header"
+                        prefixImg=""
+                      />
+                    </header>
+                  </Col>
+                </Row>,
+                <h1
+                  className="title-big"
+                >
+                  For your pleasure
+                </h1>,
+              ],
+              "tag": "div",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Col
+                    lg="6"
+                    tag="div"
+                    widths={
+                      Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ]
+                    }
+                  >
+                    <header>
+                      <Menu
+                        prefix="header"
+                        prefixImg=""
+                      />
+                    </header>
+                  </Col>,
+                  "tag": "div",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <header>
+                      <Menu
+                        prefix="header"
+                        prefixImg=""
+                      />
+                    </header>,
+                    "lg": "6",
+                    "tag": "div",
+                    "widths": Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <Menu
+                        prefix="header"
+                        prefixImg=""
+                      />,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "prefix": "header",
+                        "prefixImg": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": "header",
+                  },
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "For your pleasure",
+                  "className": "title-big",
+                },
+                "ref": null,
+                "rendered": "For your pleasure",
+                "type": "h1",
+              },
+            ],
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Container
+              tag="div"
+            >
+              <Row
+                tag="div"
+              >
+                <Col
+                  lg={
+                    Object {
+                      "offset": 2,
+                      "size": 4,
+                    }
+                  }
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <img
+                    alt="girl"
+                    className="shop__girl"
+                    src="img/coffee_cup.jpg"
+                  />
+                </Col>
+                <Col
+                  lg="4"
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <div
+                    className="title"
+                  >
+                    About our goods
+                  </div>
+                  <img
+                    alt="Beans logo"
+                    className="beanslogo"
+                    src="logo/Beans_logo_dark.svg"
+                  />
+                  <div
+                    className="shop__text"
+                  >
+                    Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+                    
+
+                    
+
+                    Afraid at highly months do things on at. Situation recommend objection do intention
+                    
+
+                    so questions.
+                    
+
+                    As greatly removed calling pleased improve an. Last ask him cold feel
+                    
+
+                    met spot shy want. Children me laughing we prospect answered followed. At it went
+                    
+
+                    is song that held help face.
+                  </div>
+                </Col>
+              </Row>
+              <div
+                className="line"
+              />
+              <Row
+                tag="div"
+              >
+                <Col
+                  lg={
+                    Object {
+                      "offset": 1,
+                      "size": 10,
+                    }
+                  }
+                  tag="div"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <Spinner />
+                  <div
+                    className="shop__wrapper"
+                  />
+                </Col>
+              </Row>
+            </Container>,
+            "className": "shop",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <Row
+                  tag="div"
+                >
+                  <Col
+                    lg={
+                      Object {
+                        "offset": 2,
+                        "size": 4,
+                      }
+                    }
+                    tag="div"
+                    widths={
+                      Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ]
+                    }
+                  >
+                    <img
+                      alt="girl"
+                      className="shop__girl"
+                      src="img/coffee_cup.jpg"
+                    />
+                  </Col>
+                  <Col
+                    lg="4"
+                    tag="div"
+                    widths={
+                      Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ]
+                    }
+                  >
+                    <div
+                      className="title"
+                    >
+                      About our goods
+                    </div>
+                    <img
+                      alt="Beans logo"
+                      className="beanslogo"
+                      src="logo/Beans_logo_dark.svg"
+                    />
+                    <div
+                      className="shop__text"
+                    >
+                      Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+                      
+
+                      
+
+                      Afraid at highly months do things on at. Situation recommend objection do intention
+                      
+
+                      so questions.
+                      
+
+                      As greatly removed calling pleased improve an. Last ask him cold feel
+                      
+
+                      met spot shy want. Children me laughing we prospect answered followed. At it went
+                      
+
+                      is song that held help face.
+                    </div>
+                  </Col>
+                </Row>,
+                <div
+                  className="line"
+                />,
+                <Row
+                  tag="div"
+                >
+                  <Col
+                    lg={
+                      Object {
+                        "offset": 1,
+                        "size": 10,
+                      }
+                    }
+                    tag="div"
+                    widths={
+                      Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ]
+                    }
+                  >
+                    <Spinner />
+                    <div
+                      className="shop__wrapper"
+                    />
+                  </Col>
+                </Row>,
+              ],
+              "tag": "div",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [
+                    <Col
+                      lg={
+                        Object {
+                          "offset": 2,
+                          "size": 4,
+                        }
+                      }
+                      tag="div"
+                      widths={
+                        Array [
+                          "xs",
+                          "sm",
+                          "md",
+                          "lg",
+                          "xl",
+                        ]
+                      }
+                    >
+                      <img
+                        alt="girl"
+                        className="shop__girl"
+                        src="img/coffee_cup.jpg"
+                      />
+                    </Col>,
+                    <Col
+                      lg="4"
+                      tag="div"
+                      widths={
+                        Array [
+                          "xs",
+                          "sm",
+                          "md",
+                          "lg",
+                          "xl",
+                        ]
+                      }
+                    >
+                      <div
+                        className="title"
+                      >
+                        About our goods
+                      </div>
+                      <img
+                        alt="Beans logo"
+                        className="beanslogo"
+                        src="logo/Beans_logo_dark.svg"
+                      />
+                      <div
+                        className="shop__text"
+                      >
+                        Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+                        
+
+                        
+
+                        Afraid at highly months do things on at. Situation recommend objection do intention
+                        
+
+                        so questions.
+                        
+
+                        As greatly removed calling pleased improve an. Last ask him cold feel
+                        
+
+                        met spot shy want. Children me laughing we prospect answered followed. At it went
+                        
+
+                        is song that held help face.
+                      </div>
+                    </Col>,
+                  ],
+                  "tag": "div",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": <img
+                        alt="girl"
+                        className="shop__girl"
+                        src="img/coffee_cup.jpg"
+                      />,
+                      "lg": Object {
+                        "offset": 2,
+                        "size": 4,
+                      },
+                      "tag": "div",
+                      "widths": Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "girl",
+                        "className": "shop__girl",
+                        "src": "img/coffee_cup.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": Array [
+                        <div
+                          className="title"
+                        >
+                          About our goods
+                        </div>,
+                        <img
+                          alt="Beans logo"
+                          className="beanslogo"
+                          src="logo/Beans_logo_dark.svg"
+                        />,
+                        <div
+                          className="shop__text"
+                        >
+                          Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+                          
+
+                          
+
+                          Afraid at highly months do things on at. Situation recommend objection do intention
+                          
+
+                          so questions.
+                          
+
+                          As greatly removed calling pleased improve an. Last ask him cold feel
+                          
+
+                          met spot shy want. Children me laughing we prospect answered followed. At it went
+                          
+
+                          is song that held help face.
+                        </div>,
+                      ],
+                      "lg": "4",
+                      "tag": "div",
+                      "widths": Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "About our goods",
+                          "className": "title",
+                        },
+                        "ref": null,
+                        "rendered": "About our goods",
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "Beans logo",
+                          "className": "beanslogo",
+                          "src": "logo/Beans_logo_dark.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.",
+                            "
+",
+                            "
+",
+                            "Afraid at highly months do things on at. Situation recommend objection do intention",
+                            "
+",
+                            "so questions.",
+                            "
+",
+                            "As greatly removed calling pleased improve an. Last ask him cold feel",
+                            "
+",
+                            "met spot shy want. Children me laughing we prospect answered followed. At it went",
+                            "
+",
+                            "is song that held help face.",
+                          ],
+                          "className": "shop__text",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.",
+                          "
+",
+                          "
+",
+                          "Afraid at highly months do things on at. Situation recommend objection do intention",
+                          "
+",
+                          "so questions.",
+                          "
+",
+                          "As greatly removed calling pleased improve an. Last ask him cold feel",
+                          "
+",
+                          "met spot shy want. Children me laughing we prospect answered followed. At it went",
+                          "
+",
+                          "is song that held help face.",
+                        ],
+                        "type": "div",
+                      },
+                    ],
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "line",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Col
+                    lg={
+                      Object {
+                        "offset": 1,
+                        "size": 10,
+                      }
+                    }
+                    tag="div"
+                    widths={
+                      Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ]
+                    }
+                  >
+                    <Spinner />
+                    <div
+                      className="shop__wrapper"
+                    />
+                  </Col>,
+                  "tag": "div",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [
+                      null,
+                      <Spinner />,
+                      <div
+                        className="shop__wrapper"
+                      />,
+                    ],
+                    "lg": Object {
+                      "offset": 1,
+                      "size": 10,
+                    },
+                    "tag": "div",
+                    "widths": Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    null,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {},
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [],
+                        "className": "shop__wrapper",
+                      },
+                      "ref": null,
+                      "rendered": Array [],
+                      "type": "div",
+                    },
+                  ],
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": "section",
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

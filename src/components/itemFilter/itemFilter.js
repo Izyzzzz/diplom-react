@@ -4,14 +4,16 @@ import {Col} from 'reactstrap';
 export default class ItemFilter extends Component {
     constructor(props){
         super(props);
-        this.buttons = [
+        this.state= {
+            buttons: [
             {name: 'Brazil', label: 'Brazil'},
             {name: 'Kenya', label: 'Kenya'},
             {name: 'Columbia', label: 'Columbia'}
         ]
     }
+    }
     render() {
-        const buttons = this.buttons.map(({name, label}) => {
+            const buttons = this.state.buttons.map(({name, label}) => {
             const active = this.props.filter === name;
             const clazz = active ? 'shop__filter-btn-active' : ''
             return (

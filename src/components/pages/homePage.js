@@ -59,7 +59,7 @@ export default class HomePage extends Component {
                 return null;
             });
             return items;
-        }
+        }        
     }
     
     render() {
