@@ -5,6 +5,7 @@ import './pages.sass';
 import getService from '../../services/getService';
 import idGenerator from 'react-id-generator';
 import Menu from '../menu';
+import Spinner from '../spinner';
 
 export default class HomePage extends Component {
     constructor(props) {
@@ -44,7 +45,9 @@ export default class HomePage extends Component {
         }
     }
     
-    render() {       
+    render() {
+        const {newBase} = this.state;        
+        const spinner = !newBase ? <Spinner /> : null;   
         return (
             <>
             <div className="preview">
@@ -98,7 +101,8 @@ export default class HomePage extends Component {
                     <div className="title">Our best</div>
                     <Row>
                         <Col lg={{size: 10, offset: 1}}>
-                            <div className="best__wrapper">
+                            {spinner}
+                            <div className="best__wrapper">                                
                                 {this.newBase()}
                             </div>
                         </Col>

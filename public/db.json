@@ -82,13 +82,5 @@
       "price": "45.99$"
     }
   ],
-  "contacts": [
-    {
-      "name": "sdsdsd",
-      "email": "hgjhgf@tghfg",
-      "phone": "",
-      "text": "sasas",
-      "id": 1
-    }
-  ]
+  "contacts": []
 }

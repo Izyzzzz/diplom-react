@@ -6,6 +6,7 @@ import getService from '../../services/getService';
 import idGenerator from 'react-id-generator';
 import ItemFilter from '../itemFilter';
 import ItemSearch from '../itemSearch';
+import Spinner from '../spinner';
 
 export default class OurCoffe extends Component {
     constructor(props) {
@@ -81,7 +82,8 @@ export default class OurCoffe extends Component {
     }
 
     render() {
-        const {filter} = this.state;
+        const {filter, newBase} = this.state;
+        const spinner = !newBase ? <Spinner /> : null; 
         return (
             <>
             <div className="banner">
@@ -128,6 +130,7 @@ export default class OurCoffe extends Component {
                     </Row>
                     <Row>
                         <Col lg={{size: 10, offset: 1}}>
+                            {spinner}
                             <div className="shop__wrapper">
                                 {this.newBase()}
                             </div>

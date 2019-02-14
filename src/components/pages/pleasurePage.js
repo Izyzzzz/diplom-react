@@ -4,6 +4,7 @@ import './pages.sass';
 import Menu from '../menu';
 import getService from '../../services/getService';
 import idGenerator from 'react-id-generator';
+import Spinner from '../spinner';
 export default class Pleasure extends Component {
     constructor(props) {
         super(props);
@@ -43,6 +44,8 @@ export default class Pleasure extends Component {
     }
 
     render() {
+        const {newBase} = this.state;        
+        const spinner = !newBase ? <Spinner /> : null;
         return (
             <>
             <div className="banner-pleasure">
@@ -82,6 +85,7 @@ export default class Pleasure extends Component {
                     <div className="line"></div>
                     <Row>
                         <Col lg={{size: 10, offset: 1}}>
+                            {spinner}
                             <div className="shop__wrapper">
                                 {this.newBase()}
                             </div>

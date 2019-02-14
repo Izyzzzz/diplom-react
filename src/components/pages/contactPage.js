@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Container, Col, Row, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import Menu from '../menu';
 import InputMask from 'react-input-mask';
+import Spinner from '../spinner';
 
 export default class Contact extends Component {
     constructor(props) {
@@ -13,7 +14,8 @@ export default class Contact extends Component {
             text: '',
             redInput: '',
             textInput: '',
-            isEdit: true
+            isEdit: true,
+            loading: false
         }
     }
 
@@ -29,15 +31,19 @@ export default class Contact extends Component {
             textInput: 'contact__form-input-red'
           })
         } else {
+          this.setState ({
+            loading: true
+          })
           let uploadOb  = {name: this.state.name,
                           email: this.state.email,
                           phone: this.state.phone,
                           text: this.state.text};
-          this.postResource("http://localhost:3001/contacts", uploadOb);
-          this.setState ({            
-            textInput: '',
-            isEdit: false
-          })
+          this.postResource("http://localhost:3001/contacts", uploadOb)
+              .then(this.setState ({            
+                textInput: '',
+                isEdit: false,
+                loading: false
+              }));
         }}
     }
     handleNameChange = (e) =>{
@@ -76,7 +82,8 @@ export default class Contact extends Component {
     }
 
     render() {
-      const {redInput, textInput, isEdit} = this.state;
+      const {redInput, textInput, isEdit, loading} = this.state;      
+      const spinner = loading ? <Spinner /> : null; 
         return (
             <>
             <div className="banner">
@@ -155,6 +162,7 @@ export default class Contact extends Component {
                         <FormGroup check row>
                           <Col sm={{size: 2, offset: 5}}>
                             <Button id="btnSubmin" outline color="secondary">Send us</Button>
+                            {spinner}
                           </Col>
                         </FormGroup>
                     </Form>                
